@@ -53,21 +53,21 @@ const UploadImageForm = () => {
         loading: "Uploading file...",
         success: "File uploaded successfully!",
         error: "File upload failed. Please try again.",
-      }
+      },
     );
   }
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col space-y-5 p-5 rounded-xl shadow-xl w-600 max-w-md mx-auto bg-cinnamon text-gray-100"
+      className="bg-cinnamon mx-auto flex w-600 max-w-md flex-col space-y-5 rounded-xl p-5 text-gray-100 shadow-xl"
     >
       <div className="flex flex-col space-y-2">
         <Label htmlFor="file" className="text-xl font-medium">
           File
         </Label>
 
-        <div className="flex items-center justify-center w-full">
+        <div className="flex w-full items-center justify-center">
           {fileUploaded ? (
             <UploadPlaceHolder />
           ) : (
@@ -83,7 +83,7 @@ const UploadImageForm = () => {
           type="text"
           name="filename"
           placeholder="Enter filename"
-          className="p-3 bg-white rounded-lg shadow-md text-gray-700"
+          className="rounded-lg bg-white p-3 text-gray-700 shadow-md"
         />
       </div>
       <div className="flex flex-col space-y-2">
@@ -92,7 +92,7 @@ const UploadImageForm = () => {
           name="filecat"
           value={selectedTag}
           onChange={(e) => setSelectedTag(e.target.value)}
-          className="p-3 bg-white rounded-lg shadow-md text-gray-700"
+          className="rounded-lg bg-white p-3 text-gray-700 shadow-md"
           required
         >
           <option value="">Select Tag</option>
@@ -103,7 +103,7 @@ const UploadImageForm = () => {
         </select>
       </div>
 
-      <Button className="p-4 text-white font-bold bg-ameri text-xl cursor-pointer hover:-translate-y-1.5 transition-all">
+      <Button className="bg-ameri cursor-pointer p-4 text-xl font-bold text-white transition-all hover:-translate-y-1.5">
         Upload 🚀
       </Button>
     </form>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Gamja_Flower } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const gamjaFlower = Gamja_Flower({
   subsets: ["latin"],
@@ -21,13 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head></head>
-      <body className={`${gamjaFlower.variable} antialiased`}>
-        <div className="min-h-screen bg-apricot  flex flex-col ">
-          <header className="w-full py-4 px-6 bg-primary shadow-md fixed top-0 left-0 text-white">
-            <h1 className="text-2xl font-bold">My Website</h1>
+      <body className={`${gamjaFlower.variable} min-h-screen antialiased`}>
+        <div className="bg-apricot flex flex-col">
+          <header className="bg-primary fixed top-0 left-0 w-full px-6 py-4 text-white shadow-md">
+            <Link href="/" className="text-2xl font-bold">
+              My Website
+            </Link>
           </header>
 
-          <main className="flex flex-1 justify-center items-center p-6 mt-16">
+          <main className="mt-16 flex flex-1 items-center justify-center p-6">
             {children}
           </main>
         </div>

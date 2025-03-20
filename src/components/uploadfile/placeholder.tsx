@@ -4,10 +4,10 @@ export const NoUploadPlaceHolder = ({
   onFileChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
-    <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500">
+    <label className="flex h-64 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-800">
       <div className="flex flex-col items-center justify-center pt-5 pb-6">
         <svg
-          className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+          className="mb-4 h-8 w-8 text-gray-500 dark:text-gray-400"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -41,10 +41,10 @@ export const NoUploadPlaceHolder = ({
 
 export const UploadPlaceHolder = () => {
   return (
-    <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg bg-lilac">
+    <label className="bg-lilac flex h-64 w-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300">
       <div className="flex flex-col items-center justify-center pt-5 pb-6">
         <svg
-          className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+          className="mb-4 h-8 w-8 text-gray-500 dark:text-gray-400"
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"

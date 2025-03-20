@@ -18,7 +18,7 @@ async function uploadfile({
 
     await fs.writeFile(
       `public/filestore/${filecat}-${filename}`,
-      Buffer.from(data)
+      Buffer.from(data),
     );
   } catch (error) {
     // Throw an error to trigger the "error" toast
