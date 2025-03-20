@@ -41,7 +41,7 @@ export const NoUploadPlaceHolder = ({
 
 export const UploadPlaceHolder = () => {
   return (
-    <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg bg-green-200">
+    <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg bg-lilac">
       <div className="flex flex-col items-center justify-center pt-5 pb-6">
         <svg
           className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
@@ -54,7 +54,7 @@ export const UploadPlaceHolder = () => {
         >
           <path d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"></path>
         </svg>
-        <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
+        <p className="mb-2 text-sm text-black dark:text-gray-400">
           File Uploaded
         </p>
       </div>
