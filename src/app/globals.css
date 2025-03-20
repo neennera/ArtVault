@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 @import "tailwindcss";
 
 
+@theme {
+  --color-primary: #472950;
+  --color-lilac: #C0A4C4;
+  --color-cinnamon: #D46A79;
+  --color-apricot: #F6CBB6;
+  --color-persian: #78201B;
+}
 body {
   font-family: 'Gamja Flower', sans-serif;
 }
