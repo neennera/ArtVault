@@ -29,7 +29,7 @@ const UploadImageForm = () => {
     const file = fileUploaded;
     const filename = formData.get("filename") as string;
     const filecat = formData.get("filecat") as string;
-    console.log(file); // log file metadata
+    // console.log(file); // log file metadata
 
     // Check if the file exists and is valid
     if (!file || file.size === 0) {
