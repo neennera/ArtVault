@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary: #472950; /* Ameri */
+  --color-ameri: #472950; /* Ameri */
   --color-lilac: #C0A4C4;
   --color-cinnamon: #D46A79;
   --color-apricot: #F6CBB6;
