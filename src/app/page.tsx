@@ -14,7 +14,7 @@ export default function Home() {
           <p>Photo Upload</p>
         </Link>
         <Link
-          href="/fileupload"
+          href="/resetpass"
           className="bg-cinnamon flex h-40 w-80 flex-col items-center justify-center space-y-2 rounded-xl text-center text-3xl text-white transition-all duration-400 hover:-translate-y-2 hover:bg-indigo-600"
         >
           <RiLockPasswordFill />
