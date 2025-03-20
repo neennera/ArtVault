@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Gamja_Flower } from "next/font/google";
+import { Gamja_Flower } from "next/font/google";
 import "./globals.css";
 
 const gamjaFlower = Gamja_Flower({
@@ -22,8 +22,8 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body className={`${gamjaFlower.variable} antialiased`}>
-        <div className="min-h-screen bg-apricot text-white flex flex-col text-white">
-          <header className="w-full py-4 px-6 bg-[var(--color-primary)] shadow-md fixed top-0 left-0">
+        <div className="min-h-screen bg-apricot  flex flex-col ">
+          <header className="w-full py-4 px-6 bg-primary shadow-md fixed top-0 left-0 text-white">
             <h1 className="text-2xl font-bold">My Website</h1>
           </header>
 
