@@ -19,7 +19,7 @@ async function uploadfile({
     if (!data) throw new Error("File content not valid");
     if (!filename) throw new Error("No file Name");
 
-    const targetDir = "D:/.project/testdumpdata/";
+    const targetDir = "D:/.project/testdumpdata/"; // POC file : you can change path to match your computer
     await fs.writeFile(
       `${targetDir}/${filecat}-${filename}`,
       Buffer.from(data),

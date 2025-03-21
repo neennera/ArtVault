@@ -2,6 +2,7 @@
 
 import React from "react";
 import UploadImageForm from "@/components/uploadfile/uploadImageForm";
+import FileTable from "@/components/uploadfile/fileTable";
 import { Toaster } from "react-hot-toast";
 export default function FileUpload() {
   return (
@@ -9,6 +10,8 @@ export default function FileUpload() {
       <Toaster />
       <h1 className="text-3xl">Select your BEST picture🖼️</h1>
       <UploadImageForm />
+      <h1 className="text-3xl">All Files🗃️</h1>
+      <FileTable />
     </main>
   );
 }
