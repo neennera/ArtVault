@@ -1,3 +1,5 @@
+// POC file step 1 : decorate image dropper
+
 export const NoUploadPlaceHolder = ({
   onFileChange,
 }: {

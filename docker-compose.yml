@@ -1,0 +1,15 @@
+# POC file step 0 :  create mongo db docker-compose
+
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:latest 
+    container_name: POCfileupload # you can change this
+    restart: unless-stopped
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: POCuser # you can change this
+      MONGO_INITDB_ROOT_PASSWORD: POCpassword # you can change this
+    ports:
+      - 27017:27017
+    volumes: # optional to preserve database after container is deleted.
+      - ./database-data:/data/db
