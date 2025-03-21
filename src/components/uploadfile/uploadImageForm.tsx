@@ -1,5 +1,6 @@
 // POC file step 2 : frontend to get image form
 "use client";
+import React from "react";
 import toast from "react-hot-toast";
 import { Button } from "../ui/button";
 import uploadfile from "./serverUploadFile";

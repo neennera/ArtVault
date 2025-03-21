@@ -1,6 +1,8 @@
-// POC file step 3 : create server action to upload file to mongo db
+// POC file step 3 : create server action to upload file with multer to 'D:\.project\testdumpdata\'
+// don't forget to creaet a floder in your computer
 "use server";
 import { promises as fs } from "fs";
+
 async function uploadfile({
   file,
   filename,
@@ -17,8 +19,9 @@ async function uploadfile({
     if (!data) throw new Error("File content not valid");
     if (!filename) throw new Error("No file Name");
 
+    const targetDir = "D:/.project/testdumpdata/";
     await fs.writeFile(
-      `public/filestore/${filecat}-${filename}`,
+      `${targetDir}/${filecat}-${filename}`,
       Buffer.from(data),
     );
   } catch (error) {

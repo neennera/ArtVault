@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Toaster } from "react-hot-toast";
 import UserDataTable from "@/components/resetpass/userDataTable";
 import AddNewUser from "@/components/resetpass/addNewUser";

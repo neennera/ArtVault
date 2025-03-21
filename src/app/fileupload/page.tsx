@@ -1,4 +1,6 @@
 //  POC file step 4 : combine it in page
+
+import React from "react";
 import UploadImageForm from "@/components/uploadfile/uploadImageForm";
 import { Toaster } from "react-hot-toast";
 export default function FileUpload() {

@@ -1,4 +1,5 @@
 // POC file step 1 : decorate image dropper
+import React from "react";
 
 export const NoUploadPlaceHolder = ({
   onFileChange,

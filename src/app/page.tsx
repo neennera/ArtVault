@@ -1,3 +1,5 @@
+import React from "react";
+
 import Link from "next/link";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { MdAddPhotoAlternate } from "react-icons/md";

@@ -1,3 +1,5 @@
+import React from "react";
+
 import type { Metadata } from "next";
 import { Gamja_Flower } from "next/font/google";
 import "./globals.css";
