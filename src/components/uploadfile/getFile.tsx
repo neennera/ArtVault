@@ -1,12 +1,19 @@
-"use server";
-import { promises as fs } from "fs";
+// POC file step 5 : function to get file and get filename
+
+// "use server";
 import toast from "react-hot-toast";
 
 export async function getPDFFile(filename: string) {
   try {
-    const targetDir = "D:/.project/testdumpdata/";
-    const data = await fs.readFile(`${targetDir}/${filename}`); // Reads file as Buffer
-    const blob = new Blob([data], { type: "application/pdf" }); // Create Blob
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"; // Adjust base URL
+    const response = await fetch(
+      `${baseUrl}/api/get-pdf?filename=${encodeURIComponent(filename)}`,
+    );
+    if (!response.ok) {
+      throw new Error(`Failed to fetch PDF: ${response.statusText}`);
+    }
+
+    const blob = await response.blob();
     const url = URL.createObjectURL(blob);
 
     const link = document.createElement("a");
@@ -15,19 +22,10 @@ export async function getPDFFile(filename: string) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  } catch (error: unknown) {
-    toast.error(`Failed to read the PDF file: ${error}`);
-  }
-}
 
-export async function getAllFilesName() {
-  try {
-    const folderPath = "D:/.project/testdumpdata/";
-    const files = await fs.readdir(folderPath);
-    console.log("Files found:", files);
-    return files;
+    URL.revokeObjectURL(url);
   } catch (error: unknown) {
-    toast.error(`Can't fetch file names: ${error}`);
-    return [];
+    console.error(error);
+    toast.error(`Failed to download the PDF file: ${error}`);
   }
 }

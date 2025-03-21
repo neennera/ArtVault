@@ -1,6 +1,9 @@
+// POC file step 5 : create file table component
+
 "use client";
 import React, { useState, useEffect } from "react";
-import { getAllFilesName, getPDFFile } from "./getFile";
+import { getPDFFile } from "./getFile";
+import { getAllFilesName } from "./getAllFileName";
 
 const FileTable = () => {
   const [files, setFiles] = useState<string[]>([]);
